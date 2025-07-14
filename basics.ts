@@ -1,3 +1,5 @@
+export {}
+
 let userName = 'Bunny'
 let user: string
 
