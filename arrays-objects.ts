@@ -41,3 +41,9 @@ let user: {
 }
 
 let val: {} = ''
+
+let recordData: Record<string, string | number>
+recordData = {
+    key1: 10,
+    key2: 'hello'
+}
