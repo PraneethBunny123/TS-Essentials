@@ -5,3 +5,16 @@ function add(a: number, b:number): number {
 function log(message: string): void {
     console.log(message)
 }
+
+////////////////////////
+// function type
+
+const logMsgCallbackFn = (msg: string) => {
+    console.log(msg);   
+}
+
+function performJob(cb: (m: string) => void) {
+    cb('Job done!')
+}
+
+performJob(logMsgCallbackFn)
