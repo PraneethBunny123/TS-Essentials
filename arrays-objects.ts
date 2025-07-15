@@ -39,3 +39,5 @@ let user: {
         id: 7
     }
 }
+
+let val: {} = ''
