@@ -13,7 +13,7 @@ export {}
 
 
 class User{
-    private _firstName: string = '';
+    protected _firstName: string = '';
     private _lastName: string = '';
 
     set firstName(name: string) {
@@ -50,5 +50,10 @@ class Employee extends User {
     constructor(public jobTitle: string) {
         super();
         super.firstName = 'Praneeth'
+    }
+
+    work() {
+        console.log(this._firstName)
+        console.log(this._lastName)
     }
 }
