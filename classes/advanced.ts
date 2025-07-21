@@ -45,3 +45,10 @@ console.log(max.fullName)
 
 console.log(User.eid)
 User.greet()
+
+class Employee extends User {
+    constructor(public jobTitle: string) {
+        super();
+        super.firstName = 'Praneeth'
+    }
+}
