@@ -1,7 +1,9 @@
 class User {
-    name = 'Max'
+    name: string;
+    age: number
 
-    constructor() {
-        //
+    constructor(n: string, a:number) {
+        this.name = n;
+        this.age = a;
     }
 }
