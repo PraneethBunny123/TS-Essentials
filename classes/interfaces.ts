@@ -8,8 +8,12 @@ interface Authentication {
     logout(): void
 }
 
-interface Authentication {
+interface Authentication { // adding more features to the existing interface
     role: string;
+}
+
+interface AuthAdmin extends Authentication {
+    newRole: 'Admin' | 'Root Manager'
 }
 
 let user: Authentication; // create a object for that interface
