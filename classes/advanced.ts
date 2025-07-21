@@ -54,6 +54,26 @@ class Employee extends User {
 
     work() {
         console.log(this._firstName)
-        console.log(this._lastName)
+        // console.log(this._lastName)
+    }
+}
+
+///////////////////////////
+
+// abstract
+
+abstract class UIElement {
+    constructor(public identifier: string) {}
+
+    clone(targetLocation: string) {
+
+    }
+}
+
+// const uiElement = new UIElement() // cannot create instance for abstarct class
+
+class sideDrawerElement extends UIElement {
+    constructor(public identifier: string, public position: 'left' | 'right') {
+        super(identifier);
     }
 }
