@@ -25,3 +25,14 @@ user = {
     },
     role: 'React developer'
 }
+
+/////////////
+// implementing the interface with class
+
+class Auth implements Authentication {
+    constructor(public email: string, public password: string, public role: string) {}
+
+    login() {}
+    logout() {}
+
+}
