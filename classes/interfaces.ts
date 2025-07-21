@@ -8,6 +8,10 @@ interface Authentication {
     logout(): void
 }
 
+interface Authentication {
+    role: string;
+}
+
 let user: Authentication; // create a object for that interface
 
 user = {
@@ -19,4 +23,5 @@ user = {
     logout() {
         // actual implementation
     },
+    role: 'React developer'
 }
