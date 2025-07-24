@@ -1,17 +1,39 @@
-type FileData = {
+// type FileData = {
+//     path: string,
+//     content: string
+// }
+
+// type DatabaseData = {
+//     connectUrl: string,
+//     credentials: string
+// }
+
+// type Status = {
+//     isOpen: boolean,
+//     errorMessage: string
+// }
+
+// type AccessedFileData = FileData & Status
+// type AccessedDatabaseData = DatabaseData & Status
+
+
+//////////////////////////////////
+// Interface
+
+interface FileData {
     path: string,
     content: string
 }
 
-type DatabaseData = {
+interface DatabaseData {
     connectUrl: string,
     credentials: string
 }
 
-type Status = {
+interface Status {
     isOpen: boolean,
     errorMessage: string
 }
 
-type AccessedFileData = FileData & Status
-type AccessedDatabaseData = DatabaseData & Status
+interface AccessedFileData extends FileData, Status {}
+interface AccessedDatabaseData extends DatabaseData, Status {}
