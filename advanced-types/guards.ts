@@ -22,6 +22,10 @@ function loadData(source: Source) {
   // source.connectionUrl; => to reach out to database
 }
 
+//////////////////////////////////////////////////////////////
+
+// with classes 
+
 class User {
   constructor(public name: string) {}
 
@@ -45,4 +49,9 @@ type Entity = User | Admin;
 
 function init(entity: Entity) {
  // .join() OR .scan() ...
+ if(entity instanceof User) {
+    entity.join() //can use join as we are checking if entity is created based on instance of User
+    return;
+ }
+ entity.scan()
 }
