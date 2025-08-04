@@ -26,3 +26,11 @@ function merge<T, U>(a: T, b: U) {
 }
 
 const ids = merge<number, string>(1, "bunny") // merge(1, "bunny") also works
+
+//////////////////////////
+
+function mergeObjs<T extends object>(a: T, b:T) {
+    return {...a, ...b}
+}
+
+const merged = mergeObjs({userName: 'bunny'}, {age: 24})
