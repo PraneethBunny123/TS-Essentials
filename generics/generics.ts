@@ -29,7 +29,7 @@ const ids = merge<number, string>(1, "bunny") // merge(1, "bunny") also works
 
 //////////////////////////
 
-function mergeObjs<T extends object>(a: T, b:T) {
+function mergeObjs<T extends object, U extends object>(a: T, b:U) {
     return {...a, ...b}
 }
 
