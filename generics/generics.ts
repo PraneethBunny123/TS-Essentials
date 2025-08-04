@@ -12,3 +12,11 @@ let store: DataStore<string | boolean> = {}
 
 store.name = 'bunny'
 store.isLearning = true
+
+////////////////
+
+function merge<T>(a: T, b: T) {
+    return [a, b]
+}
+
+const ids = merge<number>(1, 2) // merge(1, 2) also works
