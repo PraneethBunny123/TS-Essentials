@@ -14,6 +14,7 @@ store.name = 'bunny'
 store.isLearning = true
 
 ////////////////
+// generic functions
 
 // function merge<T>(a: T, b: T) {
 //     return [a, b]
@@ -28,9 +29,19 @@ function merge<T, U>(a: T, b: U) {
 const ids = merge<number, string>(1, "bunny") // merge(1, "bunny") also works
 
 //////////////////////////
+// generic objects
 
 function mergeObjs<T extends object, U extends object>(a: T, b:U) {
     return {...a, ...b}
 }
 
 const merged = mergeObjs({userName: 'bunny'}, {age: 24})
+
+/////////////////////////////////////////
+// generic classes
+
+class User<T> {
+    constructor(public id: T) {}
+}
+
+const user = new User('i1')
