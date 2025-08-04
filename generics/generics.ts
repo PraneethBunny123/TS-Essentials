@@ -4,6 +4,11 @@ export {}
 
 let names: Array<string> = ['max', 'anna'] // generic type, same as above
 
-type dataStore = {
-
+type DataStore<T> = {
+    [key: string]: T
 }
+
+let store: DataStore<string | boolean> = {}
+
+store.name = 'bunny'
+store.isLearning = true
